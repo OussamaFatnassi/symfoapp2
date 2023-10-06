@@ -54,4 +54,30 @@ class ArticleController extends AbstractController
             'form' => $form,
         ]);
     }
+
+    #[Route('/{id}/update', name: '.update', methods: ['GET', 'POST'])]
+    public function update(?Article $article, Request $request): Response|RedirectResponse
+    {
+        if (!$article instanceof Article) {
+            $this->addFlash('error', 'Article non trouvé');
+
+            return $this->redirectToRoute('admin.articles.index');
+        }
+
+        $form = $this->createForm(ArticleType::class, $article);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->em->persist($article);
+            $this->em->flush();
+            $this->addFlash('success', 'Article mis à jour avec succès');
+
+            return $this->redirectToRoute('admin.articles.index');
+        }
+
+        return $this->render('Backend/Article/update.html.twig', [
+            'form' => $form,
+            'article' => $article,
+        ]);
+    }
 }

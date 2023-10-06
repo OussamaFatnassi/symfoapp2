@@ -1,0 +1,37 @@
+<header class="sticky-top">
+	<nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">My first Symfo App</a>
+			<button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
+			<div class="collapse navbar-collapse" id="collapsibleNavId">
+				<ul class="navbar-nav me-auto mt-2 mt-lg-0">
+					<li class="nav-item">
+						<a class="nav-link" href="#" aria-current="page">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Articles</a>
+					</li>
+				</ul>
+				<div class="navbar-btn me-0 d-flex gap-2">
+					{% if app.user %}
+						{% if is_granted('ROLE_ADMIN') %}
+							<div class="dropdown open">
+								<button class="btn btn-secondary dropdown-toggle" type="button" id="triggerId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Admin
+								</button>
+								<div class="dropdown-menu" aria-labelledby="triggerId">
+									<a class="dropdown-item" href="{{ path('admin.articles.index') }}">Article</a>
+									<a class="dropdown-item" href="#">User</a>
+									<a class="dropdown-item" href="#">Catégorie</a>
+								</div>
+							</div>
+						{% endif %}
+						<a href="{{ path('app.logout') }}" class="btn btn-danger text-light">Logout</a>
+					{% else %}
+						<a href="{{ path('app.login') }}" class="btn btn-secondary">Se connecter</a>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</nav>
+</header>

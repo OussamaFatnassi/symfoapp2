@@ -8,7 +8,7 @@
 {% block body %}
 	<section class="container mt-4">
 		<h1 class="text-center">Administration des articles</h1>
-		<a href="#" class="btn btn-primary">Créer un article</a>
+		<a href="{{ path('admin.articles.create') }}" class="btn btn-primary">Créer un article</a>
 		<div class="row mt-4">
 			{% for article in articles %}
 				<div class="col-md-4">

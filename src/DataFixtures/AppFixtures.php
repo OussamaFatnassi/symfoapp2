@@ -20,8 +20,8 @@ class AppFixtures extends Fixture
         // $manager->persist($product);
 
         $user = (new User())
-            ->setFirstname('Pierre')
-            ->setLastname('Bertrand')
+            ->setFirstname('Osa')
+            ->setLastname('Re')
             ->setEmail('admin@test.com')
             ->setRoles(['ROLE_ADMIN'])
             ->setPassword(

@@ -1314,6 +1314,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@hotwired/stimulus-webpack-helpers@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@hotwired/stimulus-webpack-helpers@npm:1.0.1"
+  peerDependencies:
+    "@hotwired/stimulus": ">= 3.0"
+  checksum: 300b3b41464c8fb126c28f84731a04b10c0cfa4eb727eac4968a140856f746589a688c82803b55ba14c8c8628c5f069a114911556132197003ad790d82816ee5
+  languageName: node
+  linkType: hard
+
+"@hotwired/stimulus@npm:^3.0.0":
+  version: 3.2.2
+  resolution: "@hotwired/stimulus@npm:3.2.2"
+  checksum: c5c7506343f2b5b5092bf97827c9955735e7e0290f93da734cbac62a45f91a6612a175f05cb419d87cc32644db35806089df1fbefdef273d522eb02fd45ca74e
+  languageName: node
+  linkType: hard
+
 "@isaacs/cliui@npm:^8.0.2":
   version: 8.0.2
   resolution: "@isaacs/cliui@npm:8.0.2"
@@ -1433,6 +1449,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@orchidjs/sifter@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "@orchidjs/sifter@npm:1.0.3"
+  dependencies:
+    "@orchidjs/unicode-variants": "npm:^1.0.4"
+  checksum: 17ea575d9715955290ea637a3235e914884f7a5fcb0cd833d2e4df92b977cb1e4c1d1685f8b24897cbca0bd0447b4a2df12d28a7698eedf75d5f46a9123bf03f
+  languageName: node
+  linkType: hard
+
+"@orchidjs/unicode-variants@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "@orchidjs/unicode-variants@npm:1.0.4"
+  checksum: 74030996290d52889913f584ce890b33343081ee0f99f74e7d0aeaf5144111de908cec73e499f6e1195d8bda9f79873bdcb8d932ed00c71ee39791b8328fd79d
+  languageName: node
+  linkType: hard
+
 "@pkgjs/parseargs@npm:^0.11.0":
   version: 0.11.0
   resolution: "@pkgjs/parseargs@npm:0.11.0"
@@ -1451,6 +1483,31 @@ __metadata:
   version: 0.27.8
   resolution: "@sinclair/typebox@npm:0.27.8"
   checksum: 7e5f62b0c2c8152c5884d6241720c384d884b4d036c18ae30b03cf3ac79280d4904127b60d61992e6dcb6de3e2d55bc371e38fef7c54279001f9d53e76f4bd33
+  languageName: node
+  linkType: hard
+
+"@symfony/stimulus-bridge@npm:^3.2.0":
+  version: 3.2.2
+  resolution: "@symfony/stimulus-bridge@npm:3.2.2"
+  dependencies:
+    "@hotwired/stimulus-webpack-helpers": "npm:^1.0.1"
+    "@types/webpack-env": "npm:^1.16.4"
+    acorn: "npm:^8.0.5"
+    loader-utils: "npm:^2.0.0"
+    schema-utils: "npm:^3.0.0"
+  peerDependencies:
+    "@hotwired/stimulus": ^3.0
+  checksum: 9e2a43eb5410bc8dccf9958d8a0d12f1a738565b91a520e8cca0ddd5c2876c9e8951a280b6160917d1f94c46505c04a3b4ed82c0eee8f90f7d57a03538915bd9
+  languageName: node
+  linkType: hard
+
+"@symfony/ux-autocomplete@file:vendor/symfony/ux-autocomplete/assets::locator=root-workspace-0b6124%40workspace%3A.":
+  version: 1.0.0
+  resolution: "@symfony/ux-autocomplete@file:vendor/symfony/ux-autocomplete/assets#vendor/symfony/ux-autocomplete/assets::hash=4c42f7&locator=root-workspace-0b6124%40workspace%3A."
+  peerDependencies:
+    "@hotwired/stimulus": ^3.0.0
+    tom-select: ^2.2.2
+  checksum: b2ddaa29f99124f7e82a89f8894011d6f6be273e65785cb95a66ced1eb129a17ac51268e7e5072da8f4b9ee06fc95cebcf45fe7e86793d30c476d655b63903fe
   languageName: node
   linkType: hard
 
@@ -1828,6 +1885,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/webpack-env@npm:^1.16.4":
+  version: 1.18.2
+  resolution: "@types/webpack-env@npm:1.18.2"
+  checksum: 32d00ab80c83f1773523a39a632ccd01f4aa50932d6763082d2440b87e28311d090771cb6551d7ded8fe7fdd0aaa910c5248e359c93825f85d144a6fe240209a
+  languageName: node
+  linkType: hard
+
 "@types/ws@npm:^8.5.5":
   version: 8.5.6
   resolution: "@types/ws@npm:8.5.6"
@@ -2077,7 +2141,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"acorn@npm:^8.7.1, acorn@npm:^8.8.2":
+"acorn@npm:^8.0.5, acorn@npm:^8.7.1, acorn@npm:^8.8.2":
   version: 8.10.0
   resolution: "acorn@npm:8.10.0"
   bin:
@@ -5834,14 +5898,18 @@ __metadata:
   dependencies:
     "@babel/core": "npm:^7.17.0"
     "@babel/preset-env": "npm:^7.16.0"
+    "@hotwired/stimulus": "npm:^3.0.0"
     "@popperjs/core": "npm:^2.11.8"
+    "@symfony/stimulus-bridge": "npm:^3.2.0"
+    "@symfony/ux-autocomplete": "file:vendor/symfony/ux-autocomplete/assets"
     "@symfony/webpack-encore": "npm:^4.0.0"
     bootstrap: "npm:^5.3.2"
     core-js: "npm:^3.23.0"
     jquery: "npm:^3.7.1"
     regenerator-runtime: "npm:^0.13.9"
-    sass: "npm:^1.68.0"
-    sass-loader: "npm:^13.3.2"
+    sass: "npm:^1.69.0"
+    sass-loader: "npm:^13.0.0"
+    tom-select: "npm:^2.2.2"
     webpack: "npm:^5.74.0"
     webpack-cli: "npm:^4.10.0"
     webpack-notifier: "npm:^1.15.0"
@@ -5869,7 +5937,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass-loader@npm:^13.3.2":
+"sass-loader@npm:^13.0.0":
   version: 13.3.2
   resolution: "sass-loader@npm:13.3.2"
   dependencies:
@@ -5893,16 +5961,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.68.0":
-  version: 1.68.0
-  resolution: "sass@npm:1.68.0"
+"sass@npm:^1.69.0":
+  version: 1.69.0
+  resolution: "sass@npm:1.69.0"
   dependencies:
     chokidar: "npm:>=3.0.0 <4.0.0"
     immutable: "npm:^4.0.0"
     source-map-js: "npm:>=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: d461d979e042dc1d19387f23ac63bfcfc0827b5d2432ead64d11de86b85c22b6187defa0a32c1823739b2666361d6e46f65f1229f4936c734782f40216f1f059
+  checksum: 93ad718580eba536510bc0699600fc38aac72d818e27104c85c995f334391975c429cdfefecf940df5c6667117d0a20a545b698e32bf12ab8011692dd25581c5
   languageName: node
   linkType: hard
 
@@ -5917,7 +5985,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"schema-utils@npm:^3.1.1, schema-utils@npm:^3.2.0":
+"schema-utils@npm:^3.0.0, schema-utils@npm:^3.1.1, schema-utils@npm:^3.2.0":
   version: 3.3.0
   resolution: "schema-utils@npm:3.3.0"
   dependencies:
@@ -6476,6 +6544,16 @@ __metadata:
   version: 1.0.1
   resolution: "toidentifier@npm:1.0.1"
   checksum: ed889234ceb442c0d5f87ab3f2a8fc0679800baa41766c0d9ce1bb82c700052fd6cf5d1656e1304de13d7a7d5974962fedc1bbe9a0e4686c3d8743c716c7dd5f
+  languageName: node
+  linkType: hard
+
+"tom-select@npm:^2.2.2":
+  version: 2.2.2
+  resolution: "tom-select@npm:2.2.2"
+  dependencies:
+    "@orchidjs/sifter": "npm:^1.0.3"
+    "@orchidjs/unicode-variants": "npm:^1.0.4"
+  checksum: 8e4fbba9f789ea0743c1a532715f4908d1f70b7056c3a5766e459482aa1312514d430928f1fb2fad65bf83bc52cb84c042a3617587770b7eeed77a86a0a6d78a
   languageName: node
   linkType: hard
 
